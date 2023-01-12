@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.ozzyozdil.lsvdukkan.FirstFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.ozzyozdil.lsvdukkan.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" >
+        <action
+            android:id="@+id/action_buyFragment_to_secondFragment"
+            app:destination="@id/secondFragment"/>
+        <action
+            android:id="@+id/action_buyFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.ozzyozdil.lsvdukkan.SecondFragment"
+        android:label="SecondFragment" >
+        <action
+            android:id="@+id/action_secondFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_firstFragment"
+            app:destination="@id/firstFragment"/>
+    </fragment>
+</navigation>
